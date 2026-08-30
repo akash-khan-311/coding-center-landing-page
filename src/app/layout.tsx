@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AOSProvider from "@/provider/AOSProvider";
@@ -44,6 +45,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: meta.description,
 
     keywords: [...meta.keywords],
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/favicon.ico",
+    },
 
     authors: [
       {
@@ -89,7 +95,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
