@@ -1,11 +1,10 @@
 import { paymentConfig } from "./paymentConfig";
 
-
 export const paymentMethods = {
   BKASH: {
     name: "bKash",
     number: paymentConfig.bkash.number,
-    logo: "https://your-bkash-logo-url.com/bkash.png",
+    logo: "https://res.cloudinary.com/dtvnmf35l/image/upload/v1787682667/bKash-Logo_z3hkbu.png",
     color: "pink",
     instruction: "bKash Send Money করুন",
   },
@@ -13,7 +12,7 @@ export const paymentMethods = {
   NAGAD: {
     name: "Nagad",
     number: paymentConfig.nagad.number,
-    logo: "https://your-nagad-logo-url.com/nagad.png",
+    logo: "https://res.cloudinary.com/dtvnmf35l/image/upload/v1787682667/1679248828Nagad-Logo-PNG_j34cws.png",
     color: "orange",
     instruction: "Nagad Send Money করুন",
   },
@@ -21,7 +20,7 @@ export const paymentMethods = {
   ROCKET: {
     name: "Rocket",
     number: paymentConfig.rocket.number,
-    logo: "https://your-rocket-logo-url.com/rocket.png",
+    logo: "https://res.cloudinary.com/dtvnmf35l/image/upload/v1788111244/rocket_bmqtvi.webp",
     color: "purple",
     instruction: "Rocket Send Money করুন",
   },

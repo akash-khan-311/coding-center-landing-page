@@ -10,7 +10,7 @@ const courseContents = {
 
 type CourseSlug = keyof typeof courseContents;
 
-const DEFAULT_COURSE: CourseSlug = "web-development";
+const DEFAULT_COURSE: CourseSlug = "digital-marketing";
 
 export function getCourseFromHostname(hostname: string) {
   const cleanHostname = hostname
@@ -26,32 +26,17 @@ export function getCourseFromHostname(hostname: string) {
    * ========================================
    */
 
-  if (
-    cleanHostname === "web-development.codingcenter.net"
-  ) {
+  if (cleanHostname === "web-development.codingcenter.net") {
     subdomain = "web-development";
-  }
-
-  /*
-   * ========================================
-   * DIGITAL MARKETING
-   * ========================================
-   */
-
-  else if (
-    cleanHostname === "digital-marketing.codingcenter.net"
-  ) {
+  } else if (cleanHostname === "digital-marketing.codingcenter.net") {
     subdomain = "digital-marketing";
-  }
-
-  /*
+  } else {
+    /*
    * ========================================
    * EVERYTHING ELSE
    * ========================================
 
    */
-
-  else {
     subdomain = DEFAULT_COURSE;
   }
 
