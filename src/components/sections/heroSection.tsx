@@ -48,8 +48,8 @@ const HeroSection = ({ heroSection }: HeroProps) => {
           </Link>
         </div>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-blue-100">
-          <span>✓ লাইভ ক্লাস</span> <span>✓ রেকর্ডেড ভিডিও</span>
-          <span>✓ সার্টিফিকেট</span> <span>✓ জব গাইডলাইন</span>
+          <span className="backdrop-blur-3xl bg-white/20 p-1 rounded-full">✓ লাইভ ক্লাস</span> <span className="backdrop-blur-3xl bg-white/20 p-1 rounded-full">✓ রেকর্ডেড ভিডিও</span>
+          <span className="backdrop-blur-3xl bg-white/20 p-1 rounded-full">✓ সার্টিফিকেট</span> <span className="backdrop-blur-3xl bg-white/20 p-1 rounded-full">✓ জব গাইডলাইন</span>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ export const courseConfig = {
     name: "Frontend Development",
     batch: "Frontend Development Batch 3",
     admissionFee: "১০০",
-    courseFee: "২,০০০",
+    courseFee: "১,০০০",
   },
 
   "digital-marketing": {

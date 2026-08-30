@@ -22,7 +22,7 @@ const WhatLearn = ({ whatLearnInfo }: WhatLearnProps) => {
               key={topic}
               className="flex items-center gap-3 rounded-xl bg-slate-800 p-5 shadow-sm"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 text-green-600">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-700 text-white">
                 ✓
               </div>
               <span className="font-medium">{topic}</span>

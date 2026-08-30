@@ -48,7 +48,7 @@ export const webDevelopment = {
       { label: "ক্লাস", value: "সপ্তাহে ৫ দিন" },
       { label: "ব্যাচ", value: "লাইভ" },
       { label: "ভর্তি ফি", value: "৳ ১০০" },
-      { label: "কোর্স ফি", value: "৳ ২,০০০" },
+      { label: "কোর্স ফি", value: "৳ ১,০০০" },
     ],
   },
 
