@@ -14,7 +14,7 @@ export function getCourseFromHostname(hostname: string) {
   let subdomain = cleanHostname.split(".")[0];
 
   // Localhost হলে এখানে যেটা চাইবে সেটাই default
-  if (cleanHostname === "localhost" || cleanHostname === "127.0.0.1") {
+  if (cleanHostname === "localhost" || cleanHostname === "127.0.0.1" || cleanHostname === 'https://coding-center-landing-page.vercel.app') {
     subdomain = "digital-marketing";
   }
 
