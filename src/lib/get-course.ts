@@ -8,19 +8,55 @@ const courseContents = {
   "digital-marketing": digitalMarketing,
 } as const;
 
+type CourseSlug = keyof typeof courseContents;
+
+const DEFAULT_COURSE: CourseSlug = "web-development";
+
 export function getCourseFromHostname(hostname: string) {
-  const cleanHostname = hostname.split(":")[0];
+  const cleanHostname = hostname
+    .replace(/^https?:\/\//, "")
+    .split(":")[0]
+    .toLowerCase();
 
-  let subdomain = cleanHostname.split(".")[0];
+  let subdomain: CourseSlug = DEFAULT_COURSE;
 
-  // Localhost হলে এখানে যেটা চাইবে সেটাই default
-  if (cleanHostname === "localhost" || cleanHostname === "127.0.0.1" || cleanHostname === 'https://coding-center-landing-page.vercel.app') {
+  /*
+   * ========================================
+   * WEB DEVELOPMENT
+   * ========================================
+   */
+
+  if (
+    cleanHostname === "web-development.codingcenter.net"
+  ) {
+    subdomain = "web-development";
+  }
+
+  /*
+   * ========================================
+   * DIGITAL MARKETING
+   * ========================================
+   */
+
+  else if (
+    cleanHostname === "digital-marketing.codingcenter.net"
+  ) {
     subdomain = "digital-marketing";
   }
 
-  const config = courseConfig[subdomain as keyof typeof courseConfig];
+  /*
+   * ========================================
+   * EVERYTHING ELSE
+   * ========================================
 
-  const content = courseContents[subdomain as keyof typeof courseContents];
+   */
+
+  else {
+    subdomain = DEFAULT_COURSE;
+  }
+
+  const config = courseConfig[subdomain];
+  const content = courseContents[subdomain];
 
   if (!config || !content) {
     return null;
@@ -30,9 +66,13 @@ export function getCourseFromHostname(hostname: string) {
     ...content,
 
     slug: subdomain,
+
     name: config.name,
+
     batch: config.batch,
+
     admissionFee: config.admissionFee,
+
     courseFee: config.courseFee,
   };
 }
