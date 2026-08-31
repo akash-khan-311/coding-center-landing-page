@@ -16,7 +16,7 @@ const HeroSection = ({ heroSection }: HeroProps) => {
       <div className="mx-auto max-w-6xl space-y-3 px-6 py-20 text-center h-[95vh] flex flex-col justify-center items-center">
 
         <div className=" rounded-full backdrop-blur-3xl bg-white/20 px-4 py-1 flex items-center justify-center">
-          <ShinyText text={`ভর্তি চলছে • ${heroSection.admission}`} className=" inline-block text-lg md:text-lg font-medium" />
+          <ShinyText text={`ভর্তি চলছে • ${heroSection.admission}`} className=" inline-block text-sm md:text-lg font-medium" />
 
         </div>
         <h1 className="text-4xl font-extrabold leading-tight md:text-6xl max-w-247.5 mx-auto">

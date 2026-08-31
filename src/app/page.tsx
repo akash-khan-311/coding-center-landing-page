@@ -50,12 +50,15 @@ export default async function HomePage() {
       {/* Footer */}
       <Footer footer={course.footer} contactInfo={course.contactInfo} />
       {/* Mobile Sticky Button */}
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white p-4 shadow-2xl md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-linear-to-r from-slate-800 to-neutral-600 via-stone-800 p-4 shadow-2xl md:hidden">
         <Link
           href="#admission"
-          className="flex w-full items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-base font-bold text-white"
+          className=""
         >
-          🚀 এখনই ভর্তি হোন
+          <span className="w-full h-full flex justify-center items-center gap-2 px-8 py-3 bg-[#B931FC] text-white rounded-[14px] bg-linear-to-t from-[#a62ce2] to-[#c045fc]">
+
+            এখনই ভর্তি হোন
+          </span>
         </Link>
       </div>
     </main>
