@@ -10,7 +10,7 @@ const PaymentCTA = ({ admissionFee }: { admissionFee: string }) => {
             ভর্তি ফি প্রদান করুন
           </h2>
           <p className="mt-4 text-lg text-blue-100">
-            বিকাশ / নগদ / রকেট Merchant Payment এর মাধ্যমে সহজেই ভর্তি ফি পরিশোধ
+            বিকাশ / নগদ / রকেট Send Money এর মাধ্যমে সহজেই ভর্তি ফি পরিশোধ
             করতে পারবেন।
           </p>
           <div
