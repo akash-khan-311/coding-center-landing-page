@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FoldText from "../FoldText";
+import ShinyText from "../ShinyText";
 
 interface HeroProps {
   heroSection: {
@@ -12,10 +13,12 @@ interface HeroProps {
 const HeroSection = ({ heroSection }: HeroProps) => {
   return (
     <section className="banner text-white">
-      <div className="mx-auto max-w-6xl px-6 py-20 text-center h-[95vh] flex flex-col justify-center items-center">
-        <span className="mb-4 inline-block rounded-full backdrop-blur-3xl bg-white/20 px-4 py-1 text-xl font-medium">
-          ভর্তি চলছে • {heroSection.admission}
-        </span>
+      <div className="mx-auto max-w-6xl space-y-3 px-6 py-20 text-center h-[95vh] flex flex-col justify-center items-center">
+
+        <div className=" rounded-full backdrop-blur-3xl bg-white/20 px-4 py-1 flex items-center justify-center">
+          <ShinyText text={`ভর্তি চলছে • ${heroSection.admission}`} className=" inline-block text-lg md:text-lg font-medium" />
+
+        </div>
         <h1 className="text-4xl font-extrabold leading-tight md:text-6xl max-w-247.5 mx-auto">
           <FoldText
             text={heroSection.heading}
@@ -29,7 +32,7 @@ const HeroSection = ({ heroSection }: HeroProps) => {
             className=""
           />
         </h1>
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-blue-100 md:text-xl">
+        <p className="mx-auto  max-w-3xl text-lg text-blue-100 md:text-xl">
           {heroSection.description}
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

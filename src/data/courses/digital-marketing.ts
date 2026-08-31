@@ -120,9 +120,13 @@ export const digitalMarketing = {
       rating: 5,
     },
   ],
+
   contactInfo: {
     email: "codingcenter@gmail.com",
     address: "চিনি মসজিদ সংলগ্ন, সৈয়দপুর",
     phone: "8801765094092",
+  },
+  startBatchDate: {
+    date: "১ অক্টোবর ২০২৬",
   },
 };

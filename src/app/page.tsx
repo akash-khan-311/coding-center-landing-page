@@ -12,6 +12,7 @@ import WhyChooseUs from "@/components/sections/whyChooseUs";
 import { getCourseFromHostname } from "@/lib/get-course";
 import Link from "next/link";
 
+
 export default async function HomePage() {
   const headersList = await headers();
 
@@ -22,6 +23,8 @@ export default async function HomePage() {
   if (!course) {
     return <div>Course not found</div>;
   }
+
+  console.log(typeof course.startBatchDate)
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -43,7 +46,7 @@ export default async function HomePage() {
       <PaymentCTA admissionFee={course.admissionFee} />
       {/* Final CTA */}
 
-      <FinalCTA />
+      <FinalCTA startDate={course.startBatchDate.date} />
       {/* Footer */}
       <Footer footer={course.footer} contactInfo={course.contactInfo} />
       {/* Mobile Sticky Button */}

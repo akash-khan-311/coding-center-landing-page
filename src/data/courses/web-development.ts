@@ -119,4 +119,7 @@ export const webDevelopment = {
     address: "চিনি মসজিদ সংলগ্ন, সৈয়দপুর",
     phone: "8801765094092",
   },
+  startBatchDate: {
+    date: "১ অক্টোবর ২০২৬",
+  },
 };

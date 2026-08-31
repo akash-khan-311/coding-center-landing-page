@@ -19,9 +19,9 @@ const PaymentCTA = ({ admissionFee }: { admissionFee: string }) => {
           >
             <Link
               href="/admission"
-              className="rounded-xl bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-yellow-300"
+              className="rounded-xl font-serif bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 transition hover:bg-yellow-300"
             >
-              ৳ {admissionFee} দিয়ে ভর্তি হোন
+              Apply Now
             </Link>
             <Link
               href="https://wa.me/8801765094092"

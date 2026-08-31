@@ -11,7 +11,8 @@ const SectionTitle = ({ title, subTitle }: Props) => {
       </h2>
       <p
         data-aos="fade-up"
-        data-aos-delay="1000"
+        data-aos-duration="500"
+
         className="mt-3 text-slate-400"
       >
         {subTitle}

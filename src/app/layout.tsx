@@ -6,6 +6,7 @@ import { courseMetadata } from "@/data/courseMetaData";
 import { getCourseFromHostname } from "@/lib/get-course";
 import { headers } from "next/headers";
 import { Metadata } from "next";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -103,6 +104,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <body className="min-h-full flex flex-col">
         <AOSProvider>{children}</AOSProvider>
+        <WhatsAppButton />
       </body>
     </html>
   );
